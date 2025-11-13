@@ -30,7 +30,7 @@
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="content">
-    <h1></h1>
+    <h1>🧭 GUÍA UNIVERSITARIA UTCJ</h1>
 
     <p>Ingresar a la Universidad Tecnológica de Ciudad Juárez (UTCJ) implica adaptarse a nuevos retos académicos, horarios
       y responsabilidades. Esta guía te ofrece estrategias para una adaptación exitosa a la vida universitaria.</p>
