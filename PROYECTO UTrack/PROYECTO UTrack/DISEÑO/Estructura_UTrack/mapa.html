@@ -13,14 +13,14 @@
     <div class="navbar-content">
       <img src="../Imagener_UTrack/image.png" alt="Logo de UTrack" class="logo">
       <nav class="navbar-links">
-         <a href="../Estructura_UTrack/menu.html">UTrack</a>
+        <a href="../Estructura_UTrack/menu.html">UTrack</a>
         <a href="../Estructura_UTrack/mapa.html" class="active">Mapa</a>
         <a href="../Estructura_UTrack/comunidad.html">Comunidad</a>
         <a href="../Estructura_UTrack/estrategias.html">Estrategias de Estudio</a>
       </nav>
       <div class="navbar-user">
-        <a href="../Estructura_UTrack/perfil.html" title="Perfil">
-          <img src="../Estructura_UTrack/toros.html" alt="Los Toros" class="Toros">
+        <a href="../interaccion.html" title="Perfil">
+          <img src="../Imagener_UTrack/Toros.png" alt="Los Toros" class="Toros">
         </a>
       </div>
     </div>
@@ -37,11 +37,21 @@
         <h3>Elegir edificio</h3>
         <select id="edificio-select">
           <option value="">-- Selecciona un edificio --</option>
-          <option value="A">Edificio A - Ingeniería</option>
-          <option value="B">Edificio B - Administración</option>
-          <option value="C">Edificio C - Biblioteca</option>
-          <option value="D">Edificio D - Cafetería</option>
-          <option value="E">Edificio E - Laboratorios</option>
+          <option value="A">Edificio A </option>
+          <option value="B">Edificio B </option>
+          <option value="C">Edificio C </option>
+          <option value="D">Edificio D </option>
+          <option value="E">Edificio E </option>
+          <option value="F">Edificio F </option>
+          <option value="G">Edificio G </option>
+          <option value="H">Edificio H </option>
+          <option value="I">Edificio I </option>
+          <option value="J">Edificio J </option>
+          <option value="K">Edificio K </option>
+          <option value="L">Edificio L </option>
+          <option value="M">Edificio M </option>
+          <option value="N">Edificio N </option>
+          <option value="O">Edificio O </option>
         </select>
       </div>
 
@@ -71,12 +81,23 @@
     const selector = document.getElementById("edificio-select");
 
     const ubicaciones = {
-      A: "31.5993314,-106.4084005", // Ingeniería
-      B: "31.5999,-106.4088",       // Administración
-      C: "31.6002,-106.4079",       // Biblioteca
-      D: "31.5988,-106.4085",       // Cafetería
-      E: "31.5995,-106.4091"        // Laboratorios
-    };
+  A: "31.598750, -106.406167",
+  B: "31.599083, -106.405583",
+  C: "31.599444, -106.406167",
+  D: "31.599194, -106.406889",
+  E: "31.598694, -106.407000",
+  F: "31.599222, -106.407528",
+  G: "31.598860045103997, -106.40735302684972",
+  H: "31.599472, -106.409194",
+  I: "31.598972, -106.409361",
+  J: "31.59927813810975, -106.40989771779844",
+  K: "31.597500, -106.406556",
+  L: "31.598150443909947, -106.40707142196607",
+  M: "31.598583, -106.405417",
+  N: "31.598167, -106.407667",
+  O: "31.600389296290174, -106.40887851851099",
+};
+
 
     selector.addEventListener("change", () => {
       const coord = ubicaciones[selector.value];

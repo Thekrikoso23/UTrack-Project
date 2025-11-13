@@ -26,7 +26,7 @@ body {
   background-color: rgb(16, 43, 66);
   color: white;
   padding: 5px 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -72,76 +72,113 @@ body {
   color: white;
 }
 
-/* ICONO USUARIO */
 .Toros {
   height: 70px;
   width: auto;
   border-radius: 8px;
 }
 
-/* CONTENIDO PRINCIPAL */
+/* CONTENIDO */
 .content {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  text-align: justify;
   padding: 20px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-.content h1,
-.content h3 {
+h1 {
   text-align: center;
   margin-bottom: 10px;
+  color: rgb(16,43,66);
 }
 
-.content p {
-  line-height: 1.6;
+p {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* CARRUSEL */
-.carrusel {
-  width: 90%;
-  max-width: 1000px;
-  padding-bottom: 56.25%;
-  margin: 40px auto;
-  border-radius: 15px;
-  background-image: url("LOGO.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: banner 10s infinite;
+/* BOTÓN DESPLEGABLE */
+.toggle-form-btn {
+  background-color: rgb(0,164,116);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
   display: block;
-  overflow: hidden;
+  margin: 0 auto 20px auto;
 }
 
-@keyframes banner {
-  0%, 30% {
-    background-image: url("../Imagener_UTrack/UTCJ.png");
-    opacity: 1;
-  }
-  31%, 33% {
-    opacity: 0.7;
-  }
-  34%, 63% {
-    background-image: url("../Imagener_UTrack/TOROUNI.png");
-    opacity: 1;
-  }
-  64%, 66% {
-    opacity: 0.7;
-  }
-  67%, 99% {
-    background-image: url("../Imagener_UTrack/LOGO.png");
-    opacity: 1;
-  }
+.toggle-form-btn:hover {
+  background-color: rgb(13,111,80);
+}
+
+/* FORMULARIO */
+.form-container {
+  display: none;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.post-form input,
+.post-form textarea,
+.post-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.btn-publicar {
+  background-color: rgb(0,164,116);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-publicar:hover {
+  background-color: rgb(16,43,66);
+}
+
+/* PUBLICACIONES */
+.posts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.post h3 {
+  margin-bottom: 5px;
+  color: rgb(16,43,66);
+}
+
+.post p {
+  margin-bottom: 8px;
 }
 
 /* FOOTER */
 .footer {
-  background-color: rgb(16, 43, 66);
+  background-color: rgb(16,43,66);
   color: white;
   padding: 15px;
   font-weight: bold;
@@ -158,7 +195,7 @@ body {
 }
 
 .footer-links a {
-  color: rgb(0, 164, 116);
+  color: rgb(0,164,116);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -169,19 +206,8 @@ body {
   color: #d4ffb2;
 }
 
-/* ===============================
-   RESPONSIVO
-   =============================== */
-
-/* Tablets y laptops pequeñas */
-@media (max-width: 1024px) {
-  .carrusel {
-    height: 300px;
-  }
-}
-
-/* Celulares grandes */
-@media (max-width: 768px) {
+/* RESPONSIVO */
+@media (max-width: 480px) {
   .navbar {
     padding: 10px 15px;
   }
@@ -210,19 +236,20 @@ body {
     height: 55px;
   }
 
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    font-size: 15px;
+  }
+
   .content {
-    padding: 15px;
+    padding: 20px;
     text-align: center;
   }
 
-  .carrusel {
-    width: 95%;
-    height: 250px;
-  }
-}
-
-/* Celulares pequeños */
-@media (max-width: 480px) {
   .content h1 {
     font-size: 22px;
   }
@@ -231,11 +258,7 @@ body {
     font-size: 18px;
   }
 
-  .footer-links a {
-    font-size: 15px;
-  }
-
-  .carrusel {
+.carrusel {
     width: 95%;
     height: 180px;
     border-width: 1px;
@@ -293,5 +316,5 @@ body {
 
   h3 {
     font-size: 18px;
-  }
+  }  
 }
