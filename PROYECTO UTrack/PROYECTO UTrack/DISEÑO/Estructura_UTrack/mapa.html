@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROYECTO UTrack</title>
+  <link rel="stylesheet" href="../Creacion_UTrack/mapa.css">
+</head>
+
+
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <img src="../Imagener_UTrack/image.png" alt="Logo de UTrack" class="logo">
+      <nav class="navbar-links">
+         <a href="../Estructura_UTrack/menu.html">UTrack</a>
+        <a href="../Estructura_UTrack/mapa.html" class="active">Mapa</a>
+        <a href="../Estructura_UTrack/comunidad.html">Comunidad</a>
+        <a href="../Estructura_UTrack/estrategias.html">Estrategias de Estudio</a>
+      </nav>
+      <div class="navbar-user">
+        <a href="../Estructura_UTrack/perfil.html" title="Perfil">
+          <img src="../Estructura_UTrack/toros.html" alt="Los Toros" class="Toros">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    despliegues 
+  </aside>
+
+  <main class="mapa-main">
+    <div class="mapa-layout">
+      <!-- Panel izquierdo con el desplegable -->
+      <div class="mapa-controles">
+        <h3>Elegir edificio</h3>
+        <select id="edificio-select">
+          <option value="">-- Selecciona un edificio --</option>
+          <option value="A">Edificio A - Ingeniería</option>
+          <option value="B">Edificio B - Administración</option>
+          <option value="C">Edificio C - Biblioteca</option>
+          <option value="D">Edificio D - Cafetería</option>
+          <option value="E">Edificio E - Laboratorios</option>
+        </select>
+      </div>
+
+      <!-- Panel derecho con el mapa -->
+      <div class="mapa-container">
+        <iframe
+          id="mapa-iframe"
+          src="https://www.google.com/maps?q=31.5993314,-106.4084005&z=18&output=embed"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://sise.utcj.edu.mx/" target="_blank" rel="noopener noreferrer">🌐 SISE UTCJ</a>
+      <a href="https://www.facebook.com/SOYUTCJ" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+      <a href="mailto:contacto@utrack.com">📧 Correo</a>
+    </div>
+  </footer>
+
+  <!-- Script funcional para cambiar el mapa -->
+  <script>
+    const mapa = document.getElementById("mapa-iframe");
+    const selector = document.getElementById("edificio-select");
+
+    const ubicaciones = {
+      A: "31.5993314,-106.4084005", // Ingeniería
+      B: "31.5999,-106.4088",       // Administración
+      C: "31.6002,-106.4079",       // Biblioteca
+      D: "31.5988,-106.4085",       // Cafetería
+      E: "31.5995,-106.4091"        // Laboratorios
+    };
+
+    selector.addEventListener("change", () => {
+      const coord = ubicaciones[selector.value];
+      if (coord) {
+        mapa.src = `https://www.google.com/maps?q=${coord}&z=18&output=embed`;
+      }
+    });
+  </script>
+</body>
+</html>
