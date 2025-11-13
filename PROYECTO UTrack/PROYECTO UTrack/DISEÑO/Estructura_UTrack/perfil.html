@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registro - UTrack</title>
+  <title>Iniciar Sesión - UTrack</title>
   <link rel="stylesheet" href="../Creacion_UTrack/perfil.css" />
 </head>
 
@@ -12,7 +12,7 @@
     <div class="navbar-content">
       <img src="../Imagener_UTrack/image.png" alt="Logo UTrack" class="logo">
       <nav class="navbar-links">
-        <a href="../Estructura_UTrack/menu.html"  class="active" >UTrack</a>
+        <a class="active">UTrack</a>
       </nav>
       <div class="navbar-user">
         <img src="../Imagener_UTrack/Toros.png" alt="Usuario" class="Toros">
@@ -22,27 +22,29 @@
 
   <main class="registro-main">
     <div class="registro-contenedor">
-      <h1>Eres un Toro?</h1>
-      <h3>Regístrate</h3>
+      <h1>Bienvenido de nuevo</h1>
+      <h3>Inicia sesión</h3>
 
-      <form class="registro-form">
+      <form class="registro-form" method="POST" action="../php_UTrack/login.php">
+
         <label for="correo">Correo:</label>
-        <input type="email" id="correo" placeholder="Ingresa tu correo"	required>
+        <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
 
         <label for="password">Contraseña:</label>
-        <input type="password" id="password" placeholder="Ingresa tu contraseña" required >
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
 
-        <button type="submit">Registrarme</button>
+        <button type="submit">Iniciar Sesión</button>
       </form>
 
       <p class="texto-secundario">
-        ¿No eres un Toro y quieres formar parte de nuestra comunidad?<br>
-        <a href="../Estructura_UTrack/toros.html" class="enlace-toros">TOROS</a>
+        ¿No tienes cuenta?
+        <a href="../Estructura_UTrack/toros.html" class="enlace-toros">Regístrate aquí</a>
       </p>
 
       <p class="texto-secundario">
         <a href="../Estructura_UTrack/recuperar.html" class="enlace-olvido">¿Olvidaste tu contraseña?</a>
       </p>
+
     </div>
   </main>
 
