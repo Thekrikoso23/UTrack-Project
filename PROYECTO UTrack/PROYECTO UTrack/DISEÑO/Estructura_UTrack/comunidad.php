@@ -1,3 +1,14 @@
+<?php
+require_once "../base.php"; 
+
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header('Location: ../login.php'); 
+    exit;
+}
+
+$nombre_usuario = $_SESSION['usuario'];
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

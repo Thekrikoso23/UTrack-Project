@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 class Base {
     private $host = "localhost";
     private $port = "3307"; 
