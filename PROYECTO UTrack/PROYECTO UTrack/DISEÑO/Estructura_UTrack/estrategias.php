@@ -1,3 +1,14 @@
+<?php
+require_once "../base.php"; 
+
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header('Location: ../login.php'); 
+    exit;
+}
+
+$nombre_usuario = $_SESSION['usuario'];
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,13 +26,13 @@
     <div class="navbar-content">
       <img src="../Imagener_UTrack/image.png" alt="Logo de UTrack" class="logo">
       <nav class="navbar-links">
-        <a href="../Estructura_UTrack/menu.html">UTrack</a>
-        <a href="../Estructura_UTrack/mapa.html">Mapa</a>
-        <a href="../Estructura_UTrack/comunidad.html">Comunidad</a>
-        <a href="../Estructura_UTrack/estrategias.html" class="active">Estrategias de Estudio</a>
+        <a href="../Estructura_UTrack/menu.php">UTrack</a>
+        <a href="../Estructura_UTrack/mapa.php">Mapa</a>
+        <a href="../Estructura_UTrack/comunidad.php">Comunidad</a>
+        <a href="../Estructura_UTrack/estrategias.php" class="active">Estrategias de Estudio</a>
       </nav>
       <div class="navbar-user">
-        <a href="../Estructura_UTrack/perfil.html" title="Perfil">
+        <a href="../Estructura_UTrack/perfil.php" title="Perfil">
           <img src="../Imagener_UTrack/Toros.png" alt="Los Toros" class="Toros">
         </a>
       </div>

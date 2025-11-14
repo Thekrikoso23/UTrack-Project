@@ -1,3 +1,14 @@
+<?php
+require_once "../base.php"; 
+
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header('Location: ../login.php'); 
+    exit;
+}
+
+$nombre_usuario = $_SESSION['usuario'];
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,11 +49,11 @@
 
       <p class="texto-secundario">
         ¿No tienes cuenta?
-        <a href="../Estructura_UTrack/toros.html" class="enlace-toros">Regístrate aquí</a>
+        <a href="../Estructura_UTrack/toros.php" class="enlace-toros">Regístrate aquí</a>
       </p>
 
       <p class="texto-secundario">
-        <a href="../Estructura_UTrack/recuperar.html" class="enlace-olvido">¿Olvidaste tu contraseña?</a>
+        <a href="../Estructura_UTrack/recuperar.php" class="enlace-olvido">¿Olvidaste tu contraseña?</a>
       </p>
 
     </div>
