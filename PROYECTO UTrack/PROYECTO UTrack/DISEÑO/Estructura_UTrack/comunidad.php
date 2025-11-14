@@ -42,10 +42,21 @@
         <label>Elige edificio:</label>
         <select>
           <option value="">Selecciona un edificio</option>
-          <option>Edificio A - Ingeniería</option>
-          <option>Edificio B - Administración</option>
-          <option>Edificio C - Biblioteca</option>
-          <option>Edificio D - Cafetería</option>
+          <option>Edificio A </option>
+          <option>Edificio B </option>
+          <option>Edificio C </option>
+          <option>Edificio D </option>
+          <option>Edificio E </option>
+          <option>Edificio F </option>
+          <option>Edificio G </option>
+          <option>Edificio H </option>
+          <option>Edificio I </option>
+          <option>Edificio J </option>
+          <option>Edificio K </option>
+          <option>Edificio L </option>
+          <option>Edificio M </option>
+          <option>Edificio N </option>
+          <option>Edificio O </option>
         </select>
 
         <label>Nombre del estudiante o profesor:</label>
