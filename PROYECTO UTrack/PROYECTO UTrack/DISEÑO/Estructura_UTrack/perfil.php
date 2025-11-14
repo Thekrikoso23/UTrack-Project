@@ -49,11 +49,11 @@ $nombre_usuario = $_SESSION['usuario'];
 
       <p class="texto-secundario">
         ¿No tienes cuenta?
-        <a href="../Estructura_UTrack/toros.html" class="enlace-toros">Regístrate aquí</a>
+        <a href="../Estructura_UTrack/toros.php" class="enlace-toros">Regístrate aquí</a>
       </p>
 
       <p class="texto-secundario">
-        <a href="../Estructura_UTrack/recuperar.html" class="enlace-olvido">¿Olvidaste tu contraseña?</a>
+        <a href="../Estructura_UTrack/recuperar.php" class="enlace-olvido">¿Olvidaste tu contraseña?</a>
       </p>
 
     </div>

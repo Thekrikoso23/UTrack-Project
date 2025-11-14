@@ -19,19 +19,18 @@ $nombre_usuario = $_SESSION['usuario'];
 </head>
 
 <body>
-
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="navbar-content">
       <img src="../Imagener_UTrack/image.png" alt="Logo de UTrack" class="logo">
       <nav class="navbar-links">
-        <a href="../Estructura_UTrack/menu.html">UTrack</a>
-        <a href="../Estructura_UTrack/mapa.html">Mapa</a>
-        <a href="../Estructura_UTrack/comunidad.html" class="active">Comunidad</a>
-        <a href="../Estructura_UTrack/estrategias.html">Estrategias de Estudio</a>
+        <a href="../Estructura_UTrack/menu.php">UTrack</a>
+        <a href="../Estructura_UTrack/mapa.php">Mapa</a>
+        <a href="../Estructura_UTrack/comunidad.php" class="active">Comunidad</a>
+        <a href="../Estructura_UTrack/estrategias.php">Estrategias de Estudio</a>
       </nav>
       <div class="navbar-user">
-        <a href="../Estructura_UTrack/perfil.html">
+        <a href="../Estructura_UTrack/perfil.php">
           <img src="../Imagener_UTrack/Toros.png" alt="Los Toros" class="Toros">
         </a>
       </div>
@@ -53,10 +52,21 @@ $nombre_usuario = $_SESSION['usuario'];
         <label>Elige edificio:</label>
         <select>
           <option value="">Selecciona un edificio</option>
-          <option>Edificio A - Ingeniería</option>
-          <option>Edificio B - Administración</option>
-          <option>Edificio C - Biblioteca</option>
-          <option>Edificio D - Cafetería</option>
+          <option>Edificio A </option>
+          <option>Edificio B </option>
+          <option>Edificio C </option>
+          <option>Edificio D </option>
+          <option>Edificio E </option>
+          <option>Edificio F </option>
+          <option>Edificio G </option>
+          <option>Edificio H </option>
+          <option>Edificio I </option>
+          <option>Edificio J </option>
+          <option>Edificio K </option>
+          <option>Edificio L </option>
+          <option>Edificio M </option>
+          <option>Edificio N </option>
+          <option>Edificio O </option>
         </select>
 
         <label>Nombre del estudiante o profesor:</label>

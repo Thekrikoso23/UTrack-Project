@@ -23,7 +23,7 @@ $nombre_usuario = $_SESSION['usuario'];
     <div class="navbar-content">
       <img src="../Imagener_UTrack/image.png" alt="Logo UTrack" class="logo">
       <nav class="navbar-links">
-        <a href="../Estructura_UTrack/menu.html" class="active">UTrack</a>
+        <a href="../Estructura_UTrack/menu.php" class="active">UTrack</a>
       </nav>
       <div class="navbar-user">
         <img src="../Imagener_UTrack/Toros.png" alt="Usuario" class="Toros">
