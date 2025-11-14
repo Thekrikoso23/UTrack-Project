@@ -1,6 +1,9 @@
 <?php
-require_once "base.php";
 session_start();
+// Esto YA INICIA LA SESIÓN
+require_once "base.php";
+
+// session_start(); se eliminó de aquí porque ya está en base.php
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -22,18 +25,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->execute();
 
         if ($stmt->rowCount() > 0) {
-
             $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
+            // Asumiendo que tu columna de contraseña se llama 'password_hash'
             if (password_verify($password, $usuario["password_hash"])) {
 
+                // ¡ÉXITO! Guardamos los datos en la sesión
                 $_SESSION["usuario"] = $usuario["nombre_usuario"];
+                
+                // ¡RECOMENDADO! Guarda también el ID
+                $_SESSION["usuario_id"] = $usuario["id"]; // Asumiendo que la columna se llama 'id'
+                $_SESSION["logged_in"] = true;
 
-                echo "<script>
-                        alert('Bienvenido {$usuario['nombre_usuario']}');
-                        window.location.href='../Estructura_UTrack/menu.html';
-                      </script>";
-                exit;
+                // 2. ¡REDIRECCIÓN CORREGIDA!
+                // Redirigimos a un archivo .php, no .html
+                header('Location: ../Estructura_UTrack/menu.php');
+                exit; // ¡Importante! Detener el script después de redirigir.
+
             } else {
                 echo "<script>alert('Contraseña incorrecta'); window.history.back();</script>";
             }
